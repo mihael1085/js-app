@@ -1,4 +1,5 @@
 export function isValid(value) {
-	console.log('valid', value.length)
-	return value.length >= 5
+	if(value.length >= 10)
+		console.log('valid', value.length)
+	return value.length >= 10
 }
