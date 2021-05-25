@@ -29,6 +29,28 @@
    background-color: #2196F3;
    padding: 15px;
  }
+
+ .floating-btn {
+   position: fixed;
+   bottom: 20px;
+   right: 30px;
+ }
+
+ .modal {
+   max-width: 600px;
+   max-height: 300px;
+   margin: 100px auto;
+   overflow-y: auto;
+   background-color: #fff;
+ }
+
+ .modal > h1 {
+   text-align: center;
+ }
+
+ .modal .modal-content {
+   padding: 1rem;
+ }
  
  @media (min-width: 768px) {
    #sidebar {

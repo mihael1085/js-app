@@ -1,14 +1,22 @@
 import './styles.css'
 import { Question } from './question'
-import {isValid} from './utils'
+import {createModal, isValid} from './utils'
 
 const form = document.getElementById('form')
 const input = form.querySelector('#question-input')
+const modalBtn = document.getElementById('modal-btn')
 const submitBtn = form.querySelector('#submit')
 
+
+
+window.addEventListener('load', Question.renderList)
 form.addEventListener('submit', submitHandlerBtn)
 input.addEventListener('input', () => {
 	submitBtn.disabled = !isValid(input.value)
+})
+
+modalBtn.addEventListener('click', () => {
+	openModal()
 })
 
 function submitHandlerBtn(event) {
@@ -39,4 +47,6 @@ function submitHandlerBtn(event) {
 
 }
 
-console.log('app working....')
+function openModal() {
+	createModal('Авторизация', '<h1>Test</h1>')
+}
