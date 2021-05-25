@@ -14,7 +14,7 @@ export class Question {
 				return question
 			})
 			.then(addToLocalStorage)
-			.then(Question.renderList())
+			.then(Question.renderList)
 	}
 
 	static renderList() {
